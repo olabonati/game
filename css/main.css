@@ -17,22 +17,27 @@ body {
     position: relative;
   }
 
- #player {
+ .player {
 
     position: absolute;
-    width: 20px;
-    height: 20px;
+    background-image: url("/images/giphy.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
    
  }
     
- .block {
+ .clouds{
 
-  background-color: blueviolet;
   position: absolute;
+  background-image: url("/images/giphy-coud.gif");
+  background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+
 
 }  
 
-newImg.style.maxWidth = "100%";
-newImg.style.maxHeight = "100%";
 
 
