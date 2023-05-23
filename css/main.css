@@ -1,0 +1,38 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#board {
+    
+    margin: 48px auto;
+    height: 50vh;
+    width: 50vw;
+    align-items: center;
+    background-color: pink;
+    border: 10px solid black; /* Corrected border syntax */
+    position: relative;
+  }
+
+ #player {
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+   
+ }
+    
+ .block {
+
+  background-color: blueviolet;
+  position: absolute;
+
+}  
+
+newImg.style.maxWidth = "100%";
+newImg.style.maxHeight = "100%";
+
+
