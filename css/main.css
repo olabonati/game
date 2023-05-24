@@ -30,7 +30,7 @@ body {
  .clouds{
 
   position: absolute;
-  background-image: url("../images/giphy-coud.gif");
+  background-image: url("../images/giphy-cloud.gif");
   background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
