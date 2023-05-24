@@ -61,8 +61,8 @@ class Player {
     constructor() {
       this.width = 4;
       this.height = 10;
-      this.positionY = 30;
-      this.positionX = 45;
+      this.positionY = Math.floor(Math.random() * (70 - 50 + this.height)+8);
+      this.positionX = 47;
       this.newCloudElm = null; 
       this.createDomElement();
 
@@ -106,12 +106,12 @@ setInterval (() => {
             cloudInstance.positionX < player.positionX + player.width &&
             cloudInstance.positionX + cloudInstance.width > player.positionX &&
             cloudInstance.positionY < player.positionY + player.height &&
-            cloudInstance.height + cloudInstance.positionY > player.positionY){
+            cloudInstance.height + cloudInstance.positionY > player.positionY)
             
             console.log("game over biatch");}
-    });
+
     
-}, 100);
+)}, 100);
 
     
 
