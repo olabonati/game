@@ -75,7 +75,6 @@ class Player {
         this.newCloudElm.style.left = this.positionX + "vw";
         this.newCloudElm.style.height = this.height + "vh";
         this.newCloudElm.style.width = this.width + "vw";
-        this.newCloudElm.style.backgroundImage = "url('/images/giphy-cloud.gif')";
 
         const parentElm = document.getElementById("board");
         parentElm.appendChild(this.newCloudElm);
