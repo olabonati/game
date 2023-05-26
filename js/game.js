@@ -119,12 +119,14 @@ cloudsArr.push(newCloud);
 
 
 
-function collisionAndScore (cloudInstance){
+function collisionAndScore(cloudInstance){
+  const cloudRect = cloudInstance.newCloudElm.getBoundingClientRect();
+  const playerRect = player.newPlayerElm.getBoundingClientRect();
   if (
-    cloudInstance.positionX < player.positionX + player.width &&
-    cloudInstance.positionX + cloudInstance.width > player.positionX &&
-    cloudInstance.positionY < player.positionY + player.height &&
-    cloudInstance.height + cloudInstance.positionY > player.positionY)
+    cloudRect.x < playerRect.x + playerRect.width &&
+    cloudRect.x + cloudRect.width > playerRect.x &&
+    cloudRect.y < playerRect.y + playerRect.height &&
+    cloudRect.height + cloudRect.y > playerRect.y)
     {
       window.location.href =  "https://greenly.earth/en-us/blog/ecology-news/what-is-the-carbon-footprint-of-data-storage";
 
@@ -214,16 +216,17 @@ setInterval(()=> {
     });
   }, 200);
 
-  function collectingAndScore(trashInstance,) {
+function collectingAndScore(trashInstance) {
+    const trashRect = trashInstance.newTrashElm.getBoundingClientRect();
+    const playerRect = player.newPlayerElm.getBoundingClientRect();
     if (
-      trashInstance.positionX < player.positionX + player.width &&
-      trashInstance.positionX + trashInstance.width > player.positionX &&
-      trashInstance.positionY < this.player.positionY + player.height &&
-      trashInstance.height + trashInstance.positionY > player.positionY
-    ) {  
-      player.increaseScore(10);}
-      
-           }
+      trashRect.x < playerRect.x + playerRect.width &&
+      trashRect.x + trashRect.width > playerRect.x &&
+      trashRect.y < playerRect.y + playerRect.height &&
+      trashRect.height + trashRect.y > playerRect.y) {  
+        player.increaseScore(10);
+      }
+}
     
     
 
