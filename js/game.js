@@ -148,6 +148,7 @@ setInterval (() => {
         collisionAndScore(cloudInstance);
       });
     
+    
 }, 100);
 
 
@@ -213,7 +214,9 @@ setInterval(()=> {
     trashArr.forEach((trashInstance, index) => {
       trashInstance.moveLeft();
       trashInstance.deleteTrash(index);
+      collectingAndScore(trashInstance)
     });
+
   }, 200);
 
 function collectingAndScore(trashInstance) {
