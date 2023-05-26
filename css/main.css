@@ -19,36 +19,17 @@ body {
   }
 
  .player {
-
     position: absolute;
-    background-image: url("../images/giphy.gif");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-   
  }
     
  .clouds{
-
   position: absolute;
-  background-image: url("../images/giphy-cloud.gif");
-  background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-   
+} 
 
-
-}  
 .trash{
 
     position: absolute;
     background-image: url("../images/giphy-trash.gif");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-   
-  
-  
   }
 
   #start {

@@ -13,11 +13,11 @@ class Player {
 ///cteate DOM
   createDomElement() {
     this.newPlayerElm = document.createElement("div");
+    this.newPlayerElm.innerHTML = `<img src='../images/giphy.gif' style='width: ${this.width}vw' />`;
     this.newPlayerElm.className = "player";
     this.newPlayerElm.style.top = this.positionY + "vh";
     this.newPlayerElm.style.left = this.positionX + "vw";
-    this.newPlayerElm.style.height = this.height + "vh";
-    this.newPlayerElm.style.width = this.width + "vw";
+    // this.newPlayerElm.style.height = this.height + "vh";
     const parentElm = document.getElementById("board");
     parentElm.appendChild(this.newPlayerElm);
 
@@ -90,16 +90,15 @@ document.querySelector("#start").addEventListener('click', ()=> {
     }
     createDomElement() {
         this.newCloudElm = document.createElement("div");
+        this.newCloudElm.innerHTML = `<img src='../images/giphy-cloud.gif' style='width: ${this.width}vw' />`;
         this.newCloudElm.className = "clouds";
         this.newCloudElm.style.top = this.positionY + "vh";
         this.newCloudElm.style.left = this.positionX + "vw";
-        this.newCloudElm.style.height = this.height + "vh";
-        this.newCloudElm.style.width = this.width + "vw";
+        // this.newCloudElm.style.height = this.height + "vh";
+        // this.newCloudElm.style.width = this.width + "vw";
 
         const parentElm = document.getElementById("board");
         parentElm.appendChild(this.newCloudElm);
-
-        
       }
 
 
@@ -167,11 +166,12 @@ class Trash {
   }
   createDomElement() {
     this.newTrashElm = document.createElement("div");
+    this.newTrashElm.innerHTML = `<img src='../images/giphy-trash.gif' style='width: ${this.width}vw' />`;
     this.newTrashElm.className = "trash";
     this.newTrashElm.style.top = this.positionY + "vh";
     this.newTrashElm.style.left = this.positionX + "vw";
-    this.newTrashElm.style.height = this.height + "vh";
-    this.newTrashElm.style.width = this.width + "vw";
+    // this.newTrashElm.style.height = this.height + "vh";
+    // this.newTrashElm.style.width = this.width + "vw";
 
     const parentElm = document.getElementById("board");
 
