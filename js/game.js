@@ -150,13 +150,13 @@ setInterval (() => {
 
 
 
-/*
+
 
 class Trash {
   constructor() {
     this.width = 4;
-    this.height = 15;
-    this.positionY = Math.floor(Math.random() * (70 - 50 + this.height)+8);
+    this.height = 20;
+    this.positionY = Math.floor(Math.random() * (60 - 50 + this.height )+8);
     this.positionX = 47;
     this.newTrashElm = null; 
     this.score = 0;
@@ -173,10 +173,21 @@ class Trash {
     this.newTrashElm.style.width = this.width + "vw";
 
     const parentElm = document.getElementById("board");
+
     parentElm.appendChild(this.newTrashElm);
 
   
   }
+
+  deleteTrash (trashIndex) {
+    if (this.positionX <= 0){
+    // Delete current trash item
+   // const parentElm = document.getElementById("board");
+   // parentElm.removeChild(this.newTrashElm);
+   this.newTrashElm.remove()
+    trashArr.splice(trashIndex, 1);
+
+  }}
 
 
 moveLeft(){
@@ -193,35 +204,27 @@ const trashArr=[];
 setInterval(()=> {
   const newTrash = new Trash();
   trashArr.push(newTrash);
-  },4000);
+  },4500);
 
   setInterval(() => {
-    trashArr.forEach((trashItem) => {
-      trashItem.moveLeft();
+    trashArr.forEach((trashInstance, index) => {
+      trashInstance.moveLeft();
+      trashInstance.deleteTrash(index);
     });
-  }, 100);
-  const newTrash = new Trash();
+  }, 200);
 
-  function collectingAndScore(trashItem) {
+  function collectingAndScore(trashInstance,) {
     if (
-      trashItem.positionX < player.positionX + player.width &&
-      trashItem.positionX + trashItem.width > player.positionX &&
-      trashItem.positionY < player.positionY + player.height &&
-      trashItem.height + trashItem.positionY > player.positionY
-    ) { 
+      trashInstance.positionX < this.player.positionX + this.player.width &&
+      trashInstance.positionX + trashInstance.width > this.player.positionX &&
+      trashInstance.positionY < this.player.positionY + this.player.height &&
+      trashInstance.height + trashInstance.positionY > this.player.positionY
+    ) {  
+      player.increaseScore(10);}
       
-      player.increaseScore2(1);
-
            }
-      if (trashItem.positionX <= 0) {
-        // Delete current trash item
-        const parentElm = document.getElementById("board");
-        parentElm.removeChild(trashItem.newTrashElm);
-        trashArr.splice(trashArr.indexOf(trashItem), 1);
-
-      }}
     
-*/
+    
 
 
 
