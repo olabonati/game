@@ -1,7 +1,7 @@
 class Player {
   constructor() {
     this.width = 4;
-    this.height = 10;
+    this.height = 7;
     this.positionY =40;
     this.positionX = 0;
     this.score = 0;
@@ -127,8 +127,9 @@ function collisionAndScore (cloudInstance){
     cloudInstance.positionY < player.positionY + player.height &&
     cloudInstance.height + cloudInstance.positionY > player.positionY)
     {
-    console.log("game over biatch");
-  }
+      window.location.href =  "https://greenly.earth/en-us/blog/ecology-news/what-is-the-carbon-footprint-of-data-storage";
+
+    }
   if (cloudInstance.positionX <= 0) {
     //delete current cloud
     const parentElm = document.getElementById("board");
@@ -156,7 +157,7 @@ class Trash {
   constructor() {
     this.width = 4;
     this.height = 20;
-    this.positionY = Math.floor(Math.random() * (60 - 50 + this.height )+8);
+    this.positionY = Math.floor(Math.random() * (60 - 50 + this.height )+10);
     this.positionX = 47;
     this.newTrashElm = null; 
     this.score = 0;
@@ -215,10 +216,10 @@ setInterval(()=> {
 
   function collectingAndScore(trashInstance,) {
     if (
-      trashInstance.positionX < this.player.positionX + this.player.width &&
-      trashInstance.positionX + trashInstance.width > this.player.positionX &&
-      trashInstance.positionY < this.player.positionY + this.player.height &&
-      trashInstance.height + trashInstance.positionY > this.player.positionY
+      trashInstance.positionX < player.positionX + player.width &&
+      trashInstance.positionX + trashInstance.width > player.positionX &&
+      trashInstance.positionY < this.player.positionY + player.height &&
+      trashInstance.height + trashInstance.positionY > player.positionY
     ) {  
       player.increaseScore(10);}
       
